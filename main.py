@@ -14,7 +14,7 @@ background_game = (0, 162, 135)
 background_end = (103, 227, 0)
 count_l = 0
 count_r = 0
-ball_speed = [-2.0, 2.0]
+ball_speed = [-2, -1, 1, 2]
 start = False
 second = 100
 animation = False
@@ -182,7 +182,7 @@ while loop:
                 screen.blit(text_goal, (300, 250))
                 if tick % 10 == 0:
                     text_goal = font_int.render('GOAL!!!', True, RED)
-                    # print(tick % 10)
+                    
                 elif tick % 5 == 0:
                     text_goal = font_int.render('GOAL!!!', True, BLUE)
 
@@ -238,7 +238,6 @@ while loop:
         screen.blit(text_win_l, (240, 240))
     else:
         screen.blit(nobody, (240, 240))
-
 
 
     for even in pygame.event.get():
